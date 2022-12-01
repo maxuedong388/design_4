@@ -139,7 +139,7 @@ Mine.prototype.play = function (ev, obj) {
                 obj.innerText = curSquare.value;
             }
         } else {
-            var audio = new Audio("bao.mp3");
+            var audio = new Audio("扫雷音效.mp3");
             audio.play();//踩雷时播放雷爆炸的音效
             obj.className = 'onlymine';//记录踩雷的位置
             this.num--;
