@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原生javript面向对象扫雷大作战</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <button id='chuji'>初级</button>
+        <button id='zhongji'>中级</button>
+        <button id='gaoji'>高级</button>
+        <span id='span'></span>
+        <span>剩余雷的数量：</span><span id='num'></span>
+        <a href="javascript:void(0)">重新开始游戏</a>
+
+    </div>
+    <div id='box'></div>
+</body>
+
+</html>
+<script src="index.js"></script>
+<script>
+    var fn = (function () {
+        var box = document.getElementById('box'),
+            mine1 = new Mine(10, 10, 10, 2),
+            mine2 = new Mine(20, 20, 40, 2),
+            mine3 = new Mine(30, 30, 99, 3),
+            arr = [mine1, mine2, mine3],
+            buts = document.getElementsByTagName('button'),
+            len = buts.length,
+            mine = new Mine(20, 20, 40, 2),//记录上一次选择的难度，默认为中级
+            back = document.getElementsByTagName('a')[0];
+        mine.init()
+        //点击重新开始游戏
+        back.onclick = function () {
+            box.innerHTML = '';
+            mine.init();
+        }
+        return function () {
+            for (var i = 0; i < len; i++) {
+                (function (j) {
+                    buts[j].addEventListener('click', function () {
+                        box.innerHTML = '';
+                        arr[j].init();
+                        mine = arr[j]//将此次选择的难度传入到外部函数
+                    })
+                })(i)
+            }
+        }
+    })()
+    fn()
+
+
+
+
+
+</script>
