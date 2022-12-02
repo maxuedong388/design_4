@@ -1,0 +1,20 @@
+body{text-align: center;}
+tr{margin: 0 auto;padding: 0!important;margin: 0!important;}
+tr td{width: 20px;height: 20px;display: inline-block;box-shadow: 0px 0px 0px 0.3px #777;margin: 0;padding: 0;text-align: center;background: #c6d8dc;color: #777;font-size: 8px;line-height: 20px;}
+table{display: inline-block;margin: 0 auto;background: #c6d8dc;}
+.zero{background: #c6d8aa;}
+.one{color: deepskyblue;}
+.two{color: forestgreen;}
+.three{color: hotpink;}
+.four{color: #777;}
+.five{color: chocolate;}
+.six{color: crimson;}
+.seven{color: darkmagenta;}
+.eight{color: deeppink;}
+.mine{background:url(img/timg.png) no-repeat;background-size: 100%;}
+.onlyMine{background:url(img/timg1.png) no-repeat;background-size: 100%;}
+.flag{background: url(img/QQ20200312-212956@2x.png) 5px 2px no-repeat;background-size: 70%;}
+button{background: #c6d8aa;color: white;font-size: 10px;margin-bottom: 20px;margin-top: 10px;;}
+span{font-size: 10px;;}
+p{font-size: 10px;}
+a{text-decoration: none;color: white;background: red;padding: 2px 10px;font-size: 10px;}
